@@ -2,6 +2,7 @@
   "name": "reactwparcel",
   "version": "1.0.0",
   "description": "react revision",
+  "source": "index.js",
   "scripts": {
     "test": "reacttest"
   },
