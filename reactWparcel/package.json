@@ -1,0 +1,26 @@
+{
+  "name": "reactwparcel",
+  "version": "1.0.0",
+  "description": "react revision",
+  "main": "index.js",
+  "scripts": {
+    "test": "reacttest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashita-23/recat_revisions.git"
+  },
+  "author": "Ashita",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ashita-23/recat_revisions/issues"
+  },
+  "homepage": "https://github.com/Ashita-23/recat_revisions#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
