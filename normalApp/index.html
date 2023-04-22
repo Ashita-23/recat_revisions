@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Normal App</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="head-box">
+      <h1 class="heading">Hello world! , I am Ashita.</h1>
+      <div id="intro-box"></div>
+    </div>
+
+    <script>
+      let sefl_intro = document.createElement("p");
+      const intro_box = document.getElementById("intro-box");
+      sefl_intro.innerText =
+        "I am learning React from NamasteDev by Akshay Sain.";
+      sefl_intro.style.fontSize = "20px";
+      sefl_intro.style.padding = "20px";
+      sefl_intro.style.borderBottom = "1px solid white";
+      intro_box.appendChild(sefl_intro);
+    </script>
+  </body>
+</html>
