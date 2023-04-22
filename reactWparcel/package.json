@@ -2,7 +2,6 @@
   "name": "reactwparcel",
   "version": "1.0.0",
   "description": "react revision",
-  "main": "index.js",
   "scripts": {
     "test": "reacttest"
   },
@@ -17,7 +16,8 @@
   },
   "homepage": "https://github.com/Ashita-23/recat_revisions#readme",
   "devDependencies": {
-    "parcel": "^2.8.3"
+    "parcel": "^2.8.3",
+    "process": "^0.11.10"
   },
   "dependencies": {
     "react": "^18.2.0",
