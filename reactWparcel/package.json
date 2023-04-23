@@ -4,7 +4,9 @@
   "description": "react revision",
   "source": "index.js",
   "scripts": {
-    "test": "reacttest"
+    "start": "parcel index.html",
+    "test": "reacttest",
+    "build":"parcel build index.html"
   },
   "repository": {
     "type": "git",
