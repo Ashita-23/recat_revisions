@@ -1,0 +1,52 @@
+
+.card-outer{
+    margin: 1.3rem 1rem;
+ border: 1px solid red;
+ height: 22rem;
+ width: 16rem;
+
+}
+.image-box{
+    border: 1px solid red;
+
+}
+.images{
+    height: 150px;
+    width: 250px;
+}
+
+.detail-box{
+
+}
+
+.view-btn{
+    border: 1px solid red;
+
+}
+.name{
+
+}
+.cusine{
+
+}
+/* sub-detail-box */
+.sub-detail-box{
+    border: 1px solid red;
+
+}
+
+.MRP-box{
+    border: 1px solid red;
+
+}
+.rating{
+
+}
+
+.delivery-time{
+
+}
+
+.pay-amount{
+
+}

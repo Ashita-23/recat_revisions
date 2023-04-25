@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel index.html",
     "test": "reacttest",
-    "build":"parcel build index.html"
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Ashita-23/recat_revisions#readme",
   "devDependencies": {
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "parcel": "^2.8.3",
     "process": "^0.11.10"
   },

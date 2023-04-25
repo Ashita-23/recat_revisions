@@ -1,0 +1,30 @@
+
+
+nav{
+    background-color: white;
+    color: black;
+  height: 5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 2rem;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.Logo-box{
+
+}
+
+.search-box{
+
+}
+
+.submit-btn{
+
+}
+
+.toggle-icon{
+    
+}

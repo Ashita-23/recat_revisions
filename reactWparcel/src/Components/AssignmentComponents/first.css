@@ -1,0 +1,24 @@
+
+.containor-box{
+    height: 70vh;
+    width: auto;
+    display: flex ;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    text-transform: capitalize;
+}
+
+h1{
+    padding: .3rem;
+}
+h2{
+    padding: 0.2rem;
+}
+p{
+    font-size: 1.2rem;
+    padding: 0.2rem;
+    text-transform:lowercase;
+}
