@@ -5,7 +5,9 @@ import { IMG_URL_CDN } from "./config"
 
 const Cards = ({resturantList}) => {
 const resturantLists = resturantList?.data?.data
+console.log(resturantLists)
 const [QuickViewBtn , setQuickViewBtn] = useState(false)
+const [ratings,setRatings] = useState(4)
 const  ShowQuickView = () => {
   if(QuickViewBtn ===false){
   return setQuickViewBtn(true)
@@ -17,6 +19,9 @@ const  ShowQuickView = () => {
 //   }
 // }
 // console.log(resturantLists)
+
+// rating style green orange yellow
+
   return(<>
       <div className="card-outer" resturantid = {resturantList?.sla?.restaurantId} onMouseEnter={()=>ShowQuickView()}>
     {/* display image */}
@@ -34,9 +39,9 @@ const  ShowQuickView = () => {
          <div className="MRP-box">
          <span className="rating-Four"><i className="fa-solid fa-star"></i> {resturantLists.avgRating}</span>
          <span className="delivery-time">{resturantLists.maxDeliveryTime} min</span>
-         <span className="pay-amount">{resturantList?.costForTwo/100 || "not found   "}</span>
+         <span className="pay-amount">{resturantLists?.costForTwoString}</span>
          </div>
-         <p className="offer-box">{resturantList?.aggregatedDiscountInfoV2?.descriptionListdescriptionList[0].meta || "no offer "} <i className="fa-solid fa-tags"></i></p>
+         <p className="offer-box">{resturantLists?.aggregatedDiscountInfo?.shortDescriptionList[0].meta || " " }</p>
          </div>
          <button className={!QuickViewBtn ? "view-btn" : "view-btn show-view-btn"}>Quick View</button>
     </div>
