@@ -1,0 +1,52 @@
+
+.shimmer-outer-box{
+    border: 1px solid rgb(138, 133, 133);
+    height: 26rem;
+    width: 22rem;
+    margin: 1rem 0rem;
+    background: white;
+}
+.shimmer-image{
+    margin: 1rem;
+    height: 12rem;
+width: 20rem;
+background: rgb(153, 153, 153);
+}
+.shimmer-data-containor{
+    height: auto;
+    width: auto;
+
+    padding: 0rem 1rem;
+}
+.shimmer-shop-name{
+    padding: 1rem;
+    background: rgb(153, 153, 153);
+}
+.shimmer-shimmer-cuisines-box{
+    padding: 1rem;
+    background: rgb(153, 153, 153);
+}
+.shimmer-food-text{
+    padding: 1rem;
+    background: rgb(153, 153, 153);
+
+}
+.shimmer-RTP-box{
+    margin: 0.2rem  0rem ;
+    padding: 1rem;
+    background: rgb(153, 153, 153);
+}
+/* .shimmer-mrp-text{
+      
+} */
+
+.shimmer-btn-box{
+    margin: 0.2rem  0rem ;
+    padding: 0.5rem 0rem;
+    background: white;
+}
+
+.shimmer-offer-text{
+    padding: 1rem;
+    background: rgb(171, 171, 171);  
+}
