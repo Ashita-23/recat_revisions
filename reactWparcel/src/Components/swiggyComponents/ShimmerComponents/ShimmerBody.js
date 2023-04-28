@@ -1,9 +1,28 @@
+import CardsShimmer from "./CardsShimmer"
+import "./shimmerBody.css"
 
 
 const ShimmerBody = ()=>{
+    // console.log(allCards)
     return(<>
-        <div>
-            <nav><div></nav>
+        <div className="shimmerBody-outer">
+       <div className="shimmer-nav"></div>
+       <div className="shimmer-card-holder">
+   <CardsShimmer/>
+   <CardsShimmer/>
+   <CardsShimmer/>
+   <CardsShimmer/>
+   <CardsShimmer/>
+   <CardsShimmer/>
+   <CardsShimmer/>
+   <CardsShimmer/>
+   <CardsShimmer/>
+   <CardsShimmer/>
+   <CardsShimmer/>
+   <CardsShimmer/>
+       </div>
         </div>
     </>)
 }
+
+export default ShimmerBody
