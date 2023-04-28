@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./cardCounter.css";
 import Cards from "./Cards.js";
 import CardsShimmer from "../ShimmerComponents/CardsShimmer";
+import ShimmerBody from "../ShimmerComponents/ShimmerBody";
 
 const CardCounter = () => {
   const [allRestaurants, setNewRestaurants] = useState([]);
@@ -19,7 +20,7 @@ const CardCounter = () => {
     const jsonData = await Restaurants_API.json();
     // console.log(jsonData)
     setNewRestaurants(jsonData?.data?.cards);
-    setNewRestaurantLists(jsonData?.data?.cards)
+    setNewRestaurantLists(jsonData?.data?.cards);
   }
   // on serach  filter function
   function filterItems(searchText, allRestaurants) {
@@ -28,21 +29,23 @@ const CardCounter = () => {
     );
     return filterByName;
   }
-function fastDelivery(allRestaurants){
-  const deliveryIn30Min = allRestaurants.filter((minTime)=> minTime.data.data.maxDeliveryTime < 40)
-  return deliveryIn30Min   
-}
+  function fastDelivery(allRestaurants) {
+    const deliveryIn30Min = allRestaurants.filter(
+      (minTime) => minTime.data.data.maxDeliveryTime < 40
+    );
+    return deliveryIn30Min;
+  }
   //  Top Rated Cards
   function TopRatedFood(restaurantLists) {
     const topRatings = restaurantLists.filter(
-      (ratings) => ratings.data.data.avgRating > 3.5
+      (ratings) => ratings.data.data.avgRating > 3.9
     );
     return topRatings;
-    console.log(topRatings)
   }
+// Avoid reandring component if we dont get any data in allRestaurant variable (early return )
+  if(!allRestaurants) return <h1> some thing wrong !</h1>
 
-  // {(if restaurantLists.length == 0 )? }
-  return (allRestaurants.length === 0)? <CardsShimmer/>:(
+  return allRestaurants.length === 0 ? <ShimmerBody/> : (
     <div className="card-counter-box">
       <div className="search-header">
         {/* Search input filter buttons  */}
@@ -52,44 +55,50 @@ function fastDelivery(allRestaurants){
             placeholder="Search"
             className="input-search"
             value={searchText}
-            onChange={(e) => setSearchtext(e.target.value)}/>
+            onChange={(e) => setSearchtext(e.target.value)} />
           <button
             type="submit"
             className="input-btn"
             onClick={() => {
-              const filterCards = filterItems(searchText,allRestaurants);
-              setNewRestaurantLists(filterCards);
-
-              // console.log(filterCards)
-              // if(filterCards.length === 0){
-              // setNewRestaurantLists(allRestaurants);
-              // }else{
-              // setNewRestaurantLists(filterCards);
-              // }
-            }}>search</button>
+              const filterCards = filterItems(searchText, allRestaurants);
+              (filterCards.length === 0 ) ? setNewRestaurantLists(allRestaurants): setNewRestaurantLists(filterCards) ;
+          
+            }}> search
+          </button>
         </div>
         <div className="filter-btn-box">
-          <button className="filter-btns" onClick={()=>{
-                          setNewRestaurantLists(allRestaurants);
-          }}>relevence</button>
-          <button className="filter-btns" onClick={()=>{
-             const getFastDelivery =  fastDelivery(allRestaurants);
-             setNewRestaurantLists(getFastDelivery)
-          }}>Delivery</button>
+          <button
+            className="filter-btns"
+            onClick={() => {
+              setNewRestaurantLists(allRestaurants);
+            }}> relevence
+          </button>
+          <button
+            className="filter-btns"
+            onClick={() => {
+              const getFastDelivery = fastDelivery(allRestaurants);
+              (getFastDelivery.length === 0 ) ? setNewRestaurantLists(allRestaurants):  setNewRestaurantLists(getFastDelivery) ;
+            }}> Delivery
+          </button>
           <button
             className="filter-btns"
             onClick={() => {
               const TopRatedcards = TopRatedFood(allRestaurants);
-              setNewRestaurantLists(TopRatedcards);
-            }}> top ratings</button>
+              (TopRatedcards.length === 0 ) ? setNewRestaurantLists(allRestaurants):  setNewRestaurantLists(TopRatedcards);}}> top ratings
+          </button>
         </div>
       </div>
       {/* resturant cards  */}
       <div className="cards-box">
-      {/* <CardsShimmer/><CardsShimmer/><CardsShimmer/><CardsShimmer/> */}
-        {restaurantLists?.map((resturant) => {  
-          return  ( <Cards resturantList={resturant} key={resturant.data.data.id} />);})
-          }
+        {restaurantLists?.map((resturant) => {
+            // if input data is not match any restaurant name than show info of no data found 
+           if(restaurantLists.length === 0 ) return <h1>Restaurant is not found.</h1>
+          return  restaurantLists.length === 0 ? (
+            <CardsShimmer />
+          ) : (
+            <Cards resturantList={resturant} key={resturant.data.data.id} />
+          );
+        })}
       </div>
     </div>
   );
