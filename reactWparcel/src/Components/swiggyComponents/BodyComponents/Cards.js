@@ -5,7 +5,7 @@ import { IMG_URL_CDN } from "./config"
 
 const Cards = ({resturantList}) => {
 const resturantLists = resturantList?.data?.data
-console.log(resturantLists)
+// console.log(resturantLists)
 const [QuickViewBtn , setQuickViewBtn] = useState(false)
 const [ratings,setRatings] = useState(4)
 const  ShowQuickView = () => {
@@ -32,7 +32,7 @@ const  ShowQuickView = () => {
         {/* deatail box  */}
         <div className="detail-box">
          <p className="name">{resturantLists.name}</p>
-         {/* <p className="cusine">{resturantLists.cuisines.join(",")}</p> */}
+         <p className="cusine">{resturantLists.cuisines.join(",")}</p>
          </div>
          {/* sub- deatail box  */}
          <div className="sub-detail-box">
