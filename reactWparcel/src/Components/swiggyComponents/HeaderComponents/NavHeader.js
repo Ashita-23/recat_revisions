@@ -24,7 +24,7 @@ const LoginHandler = () => {
                 <li>discount</li>
                 <li>cart<span>{" "}</span><i className="fa-solid fa-cart-shopping"></i></li>
             </ul></div>
-       <button className={!userLog == true ? "log-btn" : "log-btn login-btn"} onClick={()=>LoginHandler()}>{!userLog == true ? "log in" : "log out"}</button>
+       {/* <button className={!userLog == true ? "log-btn" : "log-btn login-btn"} onClick={()=>LoginHandler()}>{!userLog == true ? "log in" : "log out"}</button> */}
             <div className="togle-btn"><i className="fa-solid fa-bars"></i></div>
         </nav>
     </>)
