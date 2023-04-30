@@ -1,0 +1,23 @@
+
+
+.error-box{
+    height: 50vh;
+    width: 99vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-box h1{
+    font-weight: 500;
+    color: black;
+    background-color: transparent;
+}
+
+.error-box h2{
+    font-weight: 500;
+    color: black;
+    background-color: transparent;
+}
