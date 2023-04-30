@@ -37,9 +37,14 @@
     padding: 0.5rem;
     font-size: 1.2rem;
  text-transform: capitalize;
- color: gray;
+
+ cursor: pointer;
 
 
+}
+ul li a {
+    text-decoration: none;
+    color: gray;
 }
 
 .log-btn{
