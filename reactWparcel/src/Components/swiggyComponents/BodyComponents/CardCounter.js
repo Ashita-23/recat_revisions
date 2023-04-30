@@ -11,14 +11,14 @@ const CardCounter = () => {
   //   console.log(allRestaurants);
   useEffect(() => {
     getRestaurants();
-  }, []);
+  }, [searchText]);
 
   async function getRestaurants() {
     const Restaurants_API = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.38704&lng=77.2821787&offset=15&sortBy=RELEVANCE&pageType=SEE_ALL&page_type=DESKTOP_SEE_ALL_LISTING"
     );
     const jsonData = await Restaurants_API.json();
-    // console.log(jsonData)
+    console.log(jsonData)
     setNewRestaurants(jsonData?.data?.cards);
     setNewRestaurantLists(jsonData?.data?.cards);
   }
