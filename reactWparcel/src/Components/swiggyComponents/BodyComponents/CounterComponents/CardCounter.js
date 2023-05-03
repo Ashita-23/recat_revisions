@@ -30,6 +30,7 @@ const CardCounter = () => {
     );
     return filterByName;
   }
+  
   function fastDelivery(allRestaurants) {
     const deliveryIn30Min = allRestaurants.filter(
       (minTime) => minTime.data.data.maxDeliveryTime < 40

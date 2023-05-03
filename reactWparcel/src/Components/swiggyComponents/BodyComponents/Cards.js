@@ -3,6 +3,7 @@ import React, { useState } from  "react"
 import "./cards.css"
 import { IMG_URL_CDN } from "./config"
 
+
 const Cards = ({resturantList}) => {
 const resturantLists = resturantList?.data?.data
 // console.log(resturantLists)

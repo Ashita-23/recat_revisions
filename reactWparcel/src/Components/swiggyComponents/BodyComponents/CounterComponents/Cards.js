@@ -13,6 +13,7 @@ const  ShowQuickView = () => {
   return setQuickViewBtn(true)
   }
 }
+
 // const  HideQuickView = () => {
 //   if(QuickViewBtn ===true){
 //   return setQuickViewBtn(false)
